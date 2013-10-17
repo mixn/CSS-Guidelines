@@ -1,64 +1,65 @@
-# General CSS notes, advice and guidelines
+# Allgemeine CSS Bemerkungen, Ratschläge und Richtlinien
 
 ---
 
-## Translations
+## Übersetzungen
 
-* [Russian](https://github.com/matmuchrapna/CSS-Guidelines/blob/master/README%20Russian.md)
-* [Chinese](https://github.com/chadluo/CSS-Guidelines/blob/master/README.md)
-* [French](https://github.com/flexbox/CSS-Guidelines/blob/master/README.md)
-* [Japanese](https://github.com/kiwanami/CSS-Guidelines/blob/master/README.ja.md)
+* [Russisch](https://github.com/matmuchrapna/CSS-Guidelines/blob/master/README%20Russian.md)
+* [Chinesisch](https://github.com/chadluo/CSS-Guidelines/blob/master/README.md)
+* [Französisch](https://github.com/flexbox/CSS-Guidelines/blob/master/README.md)
+* [Japanisch](https://github.com/kiwanami/CSS-Guidelines/blob/master/README.ja.md)
 
 ---
 
-In working on large, long running projects with dozens of developers, it is
-important that we all work in a unified way in order to, among other things:
+Arbeitet man an großen, lang anhaltenden Projekten mit einer Vielzahl von Entwicklern,
+so ist es wichtig, dass wir alle auf eine vereinheitlichte Art arbeiten um unter anderem:
 
-* Keep stylesheets maintainable
-* Keep code transparent and readable
-* Keep stylesheets scalable
+* Stylesheets wartbar
+* Code transparent und lesbar
+* Stylesheets skalierbar
 
-There are a variety of techniques we must employ in order to satisfy these
-goals.
+…zu halten.
 
-The first part of this document will deal with syntax, formatting and CSS
-anatomy, the second part will deal with approach, mindframe and attitude toward
-writing and architecting CSS. Exciting, huh?
+Es gibt eine Vielzahl von Techniken, die wir verinnerlichen müssen, um diese Anforderungen zu erfüllen.
 
-## Contents
+Der erste Teil dieses Dokumentes behandelt Syntax, Formatierung und Anatomie von CSS,
+der zweite widmet sich der allgemeinen Einstellung und Attitüde im Bezug auf das schreiben
+und konstruieren von CSS Code. Spannend, nicht wahr?
 
-* [CSS document anatomy](#css-document-anatomy)
-  * [General](#general)
-  * [One file vs. many files](#one-file-vs-many-files)
-  * [Table of contents](#table-of-contents)
-  * [Section titles](#section-titles)
-* [Source order](#source-order)
-* [Anatomy of rulesets](#anatomy-of-rulesets)
-* [Naming conventions](#naming-conventions)
-  * [JS hooks](#js-hooks)
-  * [Internationalisation](#internationalisation)
-* [Comments](#comments)
-  * [Comments on steroids](#comments-on-steroids)
-    * [Quasi-qualified selectors](#quasi-qualified-selectors)
-    * [Tagging code](#tagging-code)
-    * [Object/extension pointers](#objectextension-pointers)
-* [Writing CSS](#writing-css)
-* [Building new components](#building-new-components)
+## Inhalte
+
+* [Anatomie eines CSS Dokumentes](#anatomie-eines-css-dokumentes)
+  * [Allgemein](#allgemein)
+  * [Eins oder mehrere Dokumente?](#eins-oder-mehrere-dokumente?)
+  * [Inhaltsverzeichnis](#inhaltsverzeichnis)
+  * [Abschnitttitel](#abschnitttitel)
+* [Reihenfolge](#reihenfolge)
+* [Aufbau der Befehle](#aufbau-der-befehle)
+* [Namenkonventionen](#namenskonventionen)
+  * [JS Anker](#js-anker)
+  * [Internationalisierung](#internationalisierung)
+* [Kommentare](#kommentare)
+  * [Aufgepeppte Kommentare](#aufgepeppte-kommentare)
+    * [Quasi-eingeschränkte Selektoren](#quasi-eingeschränkte-selektoren)
+    * [Code etikettieren](#code-etikettieren)
+    * [Objekt-/Erweiterungshinweise](#objekt-/erweiterungshinweise)
+* [CSS schreiben](#css-schreiben)
+* [Erstellen neuer Komponenten](#erstellen-neuer-komponenten)
 * [OOCSS](#oocss)
 * [Layout](#layout)
-* [Sizing UIs](#sizing-uis)
-  * [Font sizing](#font-sizing)
-* [Shorthand](#shorthand)
+* [Skalieren von Benutzeroberflächen](#skalieren-von-benutzeroberflächen)
+  * [Skalieren von Schriften](#skalieren-von-schriften)
+* [Kurzschreibweisen](#Kurzschreibweisen)
 * [IDs](#ids)
-* [Selectors](#selectors)
-  * [Over qualified selectors](#over-qualified-selectors)
-  * [Selector performance](#selector-performance)
-* [CSS selector intent](#css-selector-intent)
+* [Selektoren](#selektoren)
+  * [Eingeschränkte Selektoren](#eingeschränkte-selektoren)
+  * [Selektor Performance](#selektor-performance)
+* [Ziel eines CSS Selektors](#ziel-eines-css-selektors)
 * [`!important`](#important)
-* [Magic numbers and absolutes](#magic-numbers-and-absolutes)
-* [Conditional stylesheets](#conditional-stylesheets)
-* [Debugging](#debugging)
-* [Preprocessors](#preprocessors)
+* [Magische Zahlen und Absolute](#magische-zahlen-und-absolute)
+* [Bedingte Stylesheets](#bedingte-stylesheets)
+* [Fehler beseitigen](#fehler-beseitigen)
+* [Preprozessoren](#preprozessoren)
 
 ---
 
