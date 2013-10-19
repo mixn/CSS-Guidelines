@@ -63,27 +63,28 @@ und konstruieren von CSS Code. Spannend, nicht wahr?
 
 ---
 
-## CSS Document Anatomy
+## Anatomie eines CSS Dokumentes
 
-No matter the document, we must always try and keep a common formatting. This
-means consistent commenting, consistent syntax and consistent naming.
+Unabhängig von der Art des Dokumentes sollten wir uns stets bemühen, eine gebräuchliche 
+Formatierung zu verinnerlichen. Das bedeutet konsequentes Kommentieren, die durchweg gleiche 
+Syntaxart und eine konsistente Benennungsform.
 
-### General
+### Allgemein
 
-Limit your stylesheets to a maximum 80 character width where possible.
-Exceptions may be gradient syntax and URLs in comments. That’s fine, there’s
-nothing we can do about that.
+Wenn möglich, limitiere deine Stylesheets in der Zeilenbreite auf ein Maximum von 80 Zeichen.
+Ausnahmen mögen die Syntax von CSS-Farbverläufen und URLs innerhalb von Kommentaren sein. Das ist okay, es gibt nichts, was wir diesbezüglich tun können.
 
-I prefer four (4) space indents over tabs and write multi-line CSS.
+Ich bevorzuge eine Einrückung mit vier (4) Leerzeichen gegenüber der, mit Tabs und ich schreibe
+stets mehrzeiliges CSS.
 
-### One file vs. many files
+### Eins oder mehrere Dokumente?
 
-Some people prefer to work with single, large files. This is fine, and by
-sticking to the following guidelines you’ll encounter no problems. Since moving
-to Sass I have started sharding my stylesheets out into lots of tiny includes.
-This too is fine… Whichever method you choose, the following rules and
-guidelines apply. The only notable difference is with regards our table of
-contents and our section titles. Read on for further explanation…
+Manche Leute arbeiten lieber mit einem großen Dokument. Das ist okay und wenn man sich
+an die hier beschriebenen Rahmenempfehlung hält, wird man damit auch keine Schwierigkeiten bekommen.
+Seit ich den Wechsel von CSS zu Sass gemacht habe, habe ich begonnen meine Stylesheets in viele,
+kleine Bruchstücke aufzuteilen. Auch das ist okay… unabhängig davon, welche der beiden Methode man
+anwendet, die hier genannten Regeln und Richtwerte treffen zu. Der einzige bemerkenswerte
+Unterschied betrifft unser Inhaltsverzeichnis und unsere Abschnitttitel. Eine genauere Erklärung folgt…
 
 ### Table of contents
 
