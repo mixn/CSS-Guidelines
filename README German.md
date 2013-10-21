@@ -144,26 +144,24 @@ Dieser große Leerraum macht sich beim durchscrollen von größeren Dateien schn
 Falls du mit mehreren, eingebundenen Dateien zu tun haben solltest, beginne jede Datei mit
 jeweils einem Sektionstitel, somit sind Zeilenumbrüche sind nicht mehr von Nöten.
 
-## Source order
+## Reihenfolge
 
-Try and write stylesheets in specificity order. This ensures that you take full
-advantage of inheritance and CSS’ first <i>C</i>; the cascade.
+Versuche Stylesheets stets der spezifischen Wirksamkeit nach anzuordnen. Das gewährleistet,
+dass man gewisse Vorteile von CSS, wie die der Vererbung und der *Kaskade*, zu seinem Vorteil nutzt.
 
-A well ordered stylesheet will be ordered something like this:
+Ein gut sortiertes Stylesheet sieht ungefähr wie folgt aus:
 
-1. **Reset** – ground zero.
-2. **Elements** – unclassed `h1`, unclassed `ul` etc.
-3. **Objects and abstractions** — generic, underlying design patterns.
-4. **Components** – full components constructed from objects and their
-   extensions.
-5. **Style trumps** – error states etc.
+1. **Reset** – Startpunkt (Ground Zero).
+2. **Elemente** – klassenlose `h1` Elemente, klassenlos `ul` Elemente, etc.
+3. **Objekte und Abstraktionen** — allgemeine, unterliegende Designmuster.
+4. **Komponenten** – ganze, fertige Komponenten, die auf Objekten und deren Erweiterungen basieren.
+5. **Style Trümpfe** – Styles für Fehlermeldungen, etc.
 
-This means that—as you go down the document—each section builds upon and
-inherits sensibly from the previous one(s). There should be less undoing of
-styles, less specificity problems and all-round better architected stylesheets.
+Das bedeutet, dass jede Sektion auf der vorherigen aufbaut, je weiter man sich im Dokument nach
+unten arbeitet. Das resultiert darin, dass man Styles seltener wieder rückgängig machen muss,
+man seltener Probleme mit der spezifischen Wirksamkeit hat und allgemein bessere Stylesheets produziert.
 
-For further reading I cannot recommend Jonathan Snook’s
-[SMACSS](http://smacss.com) highly enough.
+Als weiterführende Literatur kann ich Jonathan Snook’s [SMACSS](http://smacss.com) nicht oft genug erwähnen.
 
 ## Anatomy of rulesets
 
