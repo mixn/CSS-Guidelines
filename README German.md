@@ -32,7 +32,7 @@ und konstruieren von CSS Code. Spannend, nicht wahr?
   * [Allgemein](#allgemein)
   * [Eins oder mehrere Dokumente?](#eins-oder-mehrere-dokumente?)
   * [Inhaltsverzeichnis](#inhaltsverzeichnis)
-  * [Abschnitttitel](#abschnitttitel)
+  * [Sektionstitel](#sektionstitel)
 * [Reihenfolge](#reihenfolge)
 * [Aufbau der Befehle](#aufbau-der-befehle)
 * [Namenkonventionen](#namenskonventionen)
@@ -84,50 +84,52 @@ an die hier beschriebenen Rahmenempfehlung hält, wird man damit auch keine Schw
 Seit ich den Wechsel von CSS zu Sass gemacht habe, habe ich begonnen meine Stylesheets in viele,
 kleine Bruchstücke aufzuteilen. Auch das ist okay… unabhängig davon, welche der beiden Methode man
 anwendet, die hier genannten Regeln und Richtwerte treffen zu. Der einzige bemerkenswerte
-Unterschied betrifft unser Inhaltsverzeichnis und unsere Abschnitttitel. Eine genauere Erklärung folgt…
+Unterschied betrifft unser Inhaltsverzeichnis und unsere Sektionstitel. Eine genauere Erklärung folgt…
 
-### Table of contents
+### Inhaltsverzeichnis
 
-At the top of stylesheets, I maintain a table of contents which will detail the
-sections contained in the document, for example:
+Am Anfang meiner Stylesheets pflege ich eine Art Inhaltsverzeichnis, welches die jeweiligen,
+im Dokument existenten Sektionen detailliert beschreiben wird, zum Beispiel:
 
     /*------------------------------------*\
-        $CONTENTS
+        $INHALTE
     \*------------------------------------*/
     /**
-     * CONTENTS............You’re reading it!
-     * RESET...............Set our reset defaults
-     * FONT-FACE...........Import brand font files
+     * INHALTE............Das liest du soeben!
+     * RESET...............Hier setzen wir unsere CSS-Reset Standardwerte
+     * FONT-FACE...........Importieren unserer Schrift-Dateien
      */
 
-This will tell the next developer(s) exactly what they can expect to find in
-this file. Each item in the table of contents maps directly to a section title.
+Dies wird dem/den nächsten Entwickler(n) genau mitteilen, was genau er innerhalb
+der Datei finden kann. Jedes Element im Inhaltsverzeichnis baut eine Verbindung
+zum gleichnamigen Sektionstitel auf.
 
-If you are working in one big stylesheet, the corresponding section will also be
-in that file. If you are working across multiple files then each item in the
-table of contents will map to an include which pulls that section in.
+Falls du an einem großen Stylesheet arbeitest, befindet sich die jeweilige Sektion innerhalb
+des selben Dokumentes sein. Arbeitest du hingegen mit mehreren Dateien, wird jede Sektion innerhalb
+des Inhaltsverzeichnisses separat eingebunden.
 
-### Section titles
+### Sektionstitel
 
-The table of contents would be of no use unless it had corresponding section
-titles. Denote a section thus:
-
-    /*------------------------------------*\
-        $RESET
-    \*------------------------------------*/
-
-The `$` prefixing the name of the section allows us to run a find ([Cmd|Ctrl]+F)
-for `$[SECTION-NAME]` and **limit our search scope to section titles only**.
-
-If you are working in one large stylesheet, you leave five (5) carriage returns
-between each section, thus:
+Das Inhaltsverzeichnis wäre unbrauchbar, hätte des keine zugehörigen Sektionstitel. 
+Folgendermaßen sollte man eine Sektion andeuten:
 
     /*------------------------------------*\
         $RESET
     \*------------------------------------*/
-    [Our
-    reset
-    styles]
+
+
+Das `$` Zeichen, welches dem Namen voransteht, erlaubt es uns eine Suche ([Cmd|Ctrl]+F)
+nach `$[SEKTIONSNAME]` durchzuführen und **diese Suche aus ausschließlich auf Sektionstitel zu limitieren**.
+
+Falls du mit einem großen Stylesheet arbeitest, trenne die Sektionen mit jeweils 
+fünf Zeilenumbrüchen, also:
+
+    /*------------------------------------*\
+        $RESET
+    \*------------------------------------*/
+    [Unsere
+    Reset
+    Styles]
 
 
 
@@ -137,11 +139,10 @@ between each section, thus:
         $FONT-FACE
     \*------------------------------------*/
 
-This large chunk of whitespace is quickly noticeable when scrolling quickly
-through larger files.
+Dieser große Leerraum macht sich beim durchscrollen von größeren Dateien schnell bemerkbar.
 
-If you are working across multiple, included stylesheets, start each of those
-files with a section title and there is no need for any carriage returns.
+Falls du mit mehreren, eingebundenen Dateien zu tun haben solltest, beginne jede Datei mit
+jeweils einem Sektionstitel, somit sind Zeilenumbrüche sind nicht mehr von Nöten.
 
 ## Source order
 
